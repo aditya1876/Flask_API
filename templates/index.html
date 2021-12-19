@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APIs to connect to could DBs</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <div class="content">
+        <h1 style="text-align: center">DB Connection and Operations</h1>
+        <div class="form">
+            <form action="/do_operation" method="POST">
+                <label for="db_type">Choose a DB type</label>
+                <input type="text" name="db_type" id="db_type">
+                <label for="operation">Choose a DB Operation</label>
+                <select id="operation" name="operation">
+                    <option value="CreateTable">CreateTable</option>
+                    <option value="Update">subtract</option>
+                    <option value="Insert">multiply</option>
+                    <option value="Delete">divide</option>
+                    <option value="BulkInsert">divide</option>
+                    <option value="Download">divide</option>
+                </select>
+                <label for="username">username</label>
+                <input type="text" name="username" id="username">
+                <label for="password">passworde</label>
+                <input type="text" name="password" id="password">
+                <label for="table_name">table_name</label>
+                <input type="text" name="table_name" id="table_name">
+                <label for="column_names">column_names</label>
+                <input type="text" name="column_names" id="column_names">
+                <label for="column_datatypes">column_datatypes</label>
+                <input type="text" name="column_datatypes" id="column_datatypes">
+                <label for="column_values">column_values</label>
+                <input type="text" name="column_values" id="column_values">
+                <label for="file_location">Choose a file to do bulk insert</label>
+                <input type="text" name="file_location" id="file_location">
+                <label for="download_table">Enter 'Y' to download the selected table data</label>
+                <input type="text" name="download_table" id="download_table">
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
